@@ -28,7 +28,6 @@ public class TheGame {
 	    percent = 0.0;
 	    count = -1;
 	    player="";
-	    play();
 	}
 	
 	public void play(){
@@ -112,7 +111,6 @@ public class TheGame {
 	    catch (Exception e)
 	    {
 	      System.out.println(e);
-	      System.out.println("here");
 	    }
 	  }
 }

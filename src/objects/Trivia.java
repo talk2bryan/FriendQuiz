@@ -8,11 +8,10 @@ package objects;
  *
  */
 public class Trivia extends Game {
-	private int correctChoice;
-	  private String a,b,c;
+	private String a,b,c;
 	  
-	  public Trivia(String q, String aa, String bb, String cc, int ans,int p, int f)
-	  {
+	  public Trivia(String q, String aa, String bb, String cc, int ans,int p, int f){
+		  
 	    super(q,p,f);
 	    a=aa.toLowerCase();
 	    b=bb.toLowerCase();
@@ -28,14 +27,14 @@ public class Trivia extends Game {
 	    else
 	      super.answer = c;
 	  }
+	  
 	  @Override
-	  public String getQstn()
-	  {
+	  public String getQstn(){
 	    String result = " "+ question + "\n(a) " + a +" (b) "+ b +" (c)" +c;
 	    return result;
 	  }
-	  public void setReply(String str)
-	  {
+	  
+	  public void setReply(String str){
 	    char ch = str.charAt(0);
 	    if(ch == 'a')
 	    {
@@ -48,5 +47,4 @@ public class Trivia extends Game {
 	    else
 	      super.reply = c;
 	  }
-
 }

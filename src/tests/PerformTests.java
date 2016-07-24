@@ -1,5 +1,4 @@
 package tests;
-import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.io.BufferedReader;
@@ -30,7 +29,6 @@ public class PerformTests {
 	  
 	  public static boolean writeFile(String q, String ans){
 	    boolean result= false;
-	    FileWriter file;
 	    PrintWriter out;
 	    
 	    try
