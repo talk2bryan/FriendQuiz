@@ -8,7 +8,7 @@ package objects;
  *
  */
 public class Trivia extends Game {
-	private String a,b,c;
+	  private String a,b,c;
 	  
 	  public Trivia(String q, String aa, String bb, String cc, int ans,int p, int f){
 		  
