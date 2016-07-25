@@ -7,10 +7,10 @@ package henrybryan.friendquiz.objects;
  * @author Bryan Wodi <talk2kamp@gmail.com>
  *
  */
-public class Trivia extends Game {
+public class MultiChoiceQuestion extends Game {
 	  private String a,b,c;
 	  
-	  public Trivia(String q, String aa, String bb, String cc, int ans,int p, int f){
+	  public MultiChoiceQuestion(String q, String aa, String bb, String cc, int ans,int p, int f){
 		  
 	    super(q,p,f);
 	    a=aa.toLowerCase();

@@ -42,7 +42,7 @@ public class TheGame {
 	      String qstn,answer,result="";
 	      char ch;
 	      
-	      in = new FileReader("Trivia.txt");
+	      in = new FileReader("MultiChoiceQuestion.txt");
 	      buff = new BufferedReader(in);
 	      line = buff.readLine();
 	      newGame = new Game[Integer.parseInt(line)];
@@ -62,7 +62,7 @@ public class TheGame {
 	        switch(ch)
 	        {
 	          case 'R': 
-	            newGame[++count] = new Trivia2(tokens[1].trim(),tokens[2].trim(),Integer.parseInt(tokens[3]),Integer.parseInt(tokens[4]));
+	            newGame[++count] = new WrittenQuestion(tokens[1].trim(),tokens[2].trim(),Integer.parseInt(tokens[3]),Integer.parseInt(tokens[4]));
 	            qstn = newGame[count].getQstn();
 	            out.println("Q: "+qstn);
 	            answer = JOptionPane.showInputDialog(null,qstn);
@@ -73,7 +73,7 @@ public class TheGame {
 	            JOptionPane.showMessageDialog(null,str);
 	          break;
 	          case 'C':
-	            newGame[++count] = new Trivia(tokens[1].trim(),tokens[2].trim(),tokens[3].trim(),tokens[4].trim(),Integer.parseInt(tokens[5]),Integer.parseInt(tokens[6]),Integer.parseInt(tokens[7]));
+	            newGame[++count] = new MultiChoiceQuestion(tokens[1].trim(),tokens[2].trim(),tokens[3].trim(),tokens[4].trim(),Integer.parseInt(tokens[5]),Integer.parseInt(tokens[6]),Integer.parseInt(tokens[7]));
 	            qstn = newGame[count].getQstn();
 	            out.println("Q: "+qstn);
 	            answer = JOptionPane.showInputDialog(null,qstn);
