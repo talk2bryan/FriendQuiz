@@ -31,5 +31,36 @@ public class AccessQuestions {
 		currentQuestion = 0;
 		return dataAccess.getQuestionSequential(questions);
 	}
+	
+	public String deleteQuestion(Question currQuestion) {
+		String result;
+		result = dataAccess.deleteQuestion(currQuestion);
+		refreshQuestions();
+		return result;
+	}
+	
+	public String insertQuestion(Question currQuestion){
+		String result = dataAccess.insertQuestion(currQuestion);
+		refreshQuestions();
+		return result;
+	}
+	
+	public Question getSequential(){
+		if (questions == null) {
+			questions = new ArrayList<>();
+			dataAccess.getQuestionSequential(questions);
+			currentQuestion = 0;
+		}
+		else if (currentQuestion < questions.size()) {
+			question = questions.get(currentQuestion);
+			currentQuestion++;
+		}
+		else {
+			refreshQuestions();
+			question = null;
+			currentQuestion = 0;
+		}
+		return question;
+	}
 
 }
