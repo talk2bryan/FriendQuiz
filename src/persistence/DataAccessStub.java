@@ -14,6 +14,9 @@ import objects.Question;
 
 public class DataAccessStub {
 	private ArrayList<Question> questions;
+	private String dbName;
+	
+	public DataAccessStub(String dbName) { this.dbName = dbName; }
 	
 	public void open(String dbName){
 		Question question;
@@ -98,4 +101,8 @@ public class DataAccessStub {
         }
         return key;
     }
+
+	public void close() {
+		System.out.println("Closed " + dbName );
+	}
 }
