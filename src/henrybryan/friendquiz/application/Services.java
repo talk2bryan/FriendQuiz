@@ -3,6 +3,7 @@
  */
 package henrybryan.friendquiz.application;
 
+import henrybryan.friendquiz.persistence.DataAccess;
 import henrybryan.friendquiz.persistence.DataAccessStub;
 
 /**
@@ -10,9 +11,9 @@ import henrybryan.friendquiz.persistence.DataAccessStub;
  *
  */
 public class Services {
-	private static DataAccessStub dataAccessService = null;
+	private static DataAccess dataAccessService = null;
 	
-	public static DataAccessStub createDataAccess(String dbName){
+	public static DataAccess createDataAccess(String dbName){
         if (dataAccessService == null)
         {
             dataAccessService = new DataAccessStub(dbName);
@@ -21,7 +22,7 @@ public class Services {
         return dataAccessService;
     }
 	
-	public static DataAccessStub getDataAccess(String dbName){
+	public static DataAccess getDataAccess(String dbName){
         System.out.println(dbName + ": Initiating...");
         if (dataAccessService == null)
         {

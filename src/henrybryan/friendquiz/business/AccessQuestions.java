@@ -6,15 +6,15 @@ package henrybryan.friendquiz.business;
 import java.util.ArrayList;
 
 import henrybryan.friendquiz.application.Services;
-import henrybryan.friendquiz.persistence.DataAccessStub;
 import henrybryan.friendquiz.objects.Question;
+import henrybryan.friendquiz.persistence.DataAccess;
 
 /**
  * @author Bryan Wodi <talk2kamp@gmail.com>
  *
  */
 public class AccessQuestions {
-	private DataAccessStub dataAccess;
+	private DataAccess dataAccess;
 	private ArrayList<Question> questions;
 	private Question question;
 	private int currentQuestion;
@@ -45,6 +45,10 @@ public class AccessQuestions {
 		return result;
 	}
 	
+	public int fetchMark(Question currQuestion, String response){
+		return dataAccess.fetchMark(currQuestion, response);
+	}
+	
 	public Question getSequential(){
 		if (questions == null) {
 			questions = new ArrayList<>();
@@ -61,6 +65,10 @@ public class AccessQuestions {
 			currentQuestion = 0;
 		}
 		return question;
+	}
+
+	public ArrayList<Question> getQuestions() {
+		return questions;
 	}
 
 }

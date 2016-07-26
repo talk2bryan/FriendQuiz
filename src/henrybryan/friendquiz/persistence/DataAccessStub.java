@@ -8,12 +8,16 @@ import java.util.List;
 
 import henrybryan.friendquiz.objects.Question;
 
-public class DataAccessStub {
+public class DataAccessStub implements DataAccess {
 	private ArrayList<Question> questions;
 	private String dbName;
 	
 	public DataAccessStub(String dbName) { this.dbName = dbName; }
 	
+	/* (non-Javadoc)
+	 * @see henrybryan.friendquiz.persistence.DataAccess#open(java.lang.String)
+	 */
+	@Override
 	public void open(String dbName){
 		Question question;
 		
@@ -37,17 +41,29 @@ public class DataAccessStub {
 		System.out.println("opened " + dbName);
 	}
 	
+	/* (non-Javadoc)
+	 * @see henrybryan.friendquiz.persistence.DataAccess#getQuestionSequential(java.util.List)
+	 */
+	@Override
 	public String getQuestionSequential(List<Question> questionResult) {
 		questionResult.clear();
 		questionResult.addAll(questions);
 		return null;
 	}
 	
+	/* (non-Javadoc)
+	 * @see henrybryan.friendquiz.persistence.DataAccess#insertQuestion(henrybryan.friendquiz.objects.Question)
+	 */
+	@Override
 	public String  insertQuestion(Question currentQuestion) {
 		questions.add(currentQuestion);
 		return null;
 	}
 	
+	/* (non-Javadoc)
+	 * @see henrybryan.friendquiz.persistence.DataAccess#deleteQuestion(henrybryan.friendquiz.objects.Question)
+	 */
+	@Override
 	public String deleteQuestion(Question currentQuestion){
 		int index;
 		index = questions.indexOf(currentQuestion);
@@ -59,21 +75,29 @@ public class DataAccessStub {
 	}
 	
 	//assert that question not null
+	/* (non-Javadoc)
+	 * @see henrybryan.friendquiz.persistence.DataAccess#getCurrentQuestion(henrybryan.friendquiz.objects.Question)
+	 */
+	@Override
 	public Question getCurrentQuestion(Question currQuestion){
 		Question question = null;
 		
 		for (int i = 0; i < questions.size(); i++) {
 			
-			String query = currQuestion.getQuery();
+			String query = currQuestion.getQuestion();
 			String key = currQuestion.getKey();
 			
-			if (questions.get(i).getQuery().equalsIgnoreCase(query) && questions.get(i).getKey().equalsIgnoreCase(key)) {
+			if (questions.get(i).getQuestion().equalsIgnoreCase(query) && questions.get(i).getKey().equalsIgnoreCase(key)) {
 				question = questions.get(i);
 			}
 		}
 		return question;
 	}
 	
+	/* (non-Javadoc)
+	 * @see henrybryan.friendquiz.persistence.DataAccess#getQuery(henrybryan.friendquiz.objects.Question)
+	 */
+	@Override
 	public String getQuery(Question currQuestion) {
         int index;
         String query = null;
@@ -81,11 +105,15 @@ public class DataAccessStub {
         index = questions.indexOf(currQuestion);
         if (index >= 0)
         {
-        	query = questions.get(index).getQuery();
+        	query = questions.get(index).getQuestion();
         }
         return query;
     }
 	
+	/* (non-Javadoc)
+	 * @see henrybryan.friendquiz.persistence.DataAccess#getKey(henrybryan.friendquiz.objects.Question)
+	 */
+	@Override
 	public String getKey(Question currQuestion) {
         int index;
         String key = null;
@@ -98,7 +126,17 @@ public class DataAccessStub {
         return key;
     }
 
+	/* (non-Javadoc)
+	 * @see henrybryan.friendquiz.persistence.DataAccess#close()
+	 */
+	@Override
 	public void close() {
 		System.out.println("Closed " + dbName );
+	}
+
+	@Override
+	public int fetchMark(Question currQuestion, String response) {
+		return  ( (getKey(currQuestion).equalsIgnoreCase(response)) ? currQuestion.getPassMark() : ((-1) * currQuestion.getFailMark()) );
+		
 	}
 }

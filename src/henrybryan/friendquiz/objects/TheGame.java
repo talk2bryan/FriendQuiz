@@ -31,7 +31,7 @@ public class TheGame {
 	}
 	
 	public void play(){
-	    Game []newGame;
+		Question []newGame;
 	    
 	    try
 	    {
@@ -42,10 +42,10 @@ public class TheGame {
 	      String qstn,answer,result="";
 	      char ch;
 	      
-	      in = new FileReader("MultiChoiceQuestion.txt");
+	      in = new FileReader("Trivia.txt");
 	      buff = new BufferedReader(in);
 	      line = buff.readLine();
-	      newGame = new Game[Integer.parseInt(line)];
+	      newGame = new Question[Integer.parseInt(line)];
 	      line = buff.readLine();
 	      PrintWriter out= new PrintWriter(new FileOutputStream(new File("log.txt")),true);
 	      player = JOptionPane.showInputDialog(null,"Who is playing?");
@@ -63,7 +63,7 @@ public class TheGame {
 	        {
 	          case 'R': 
 	            newGame[++count] = new WrittenQuestion(tokens[1].trim(),tokens[2].trim(),Integer.parseInt(tokens[3]),Integer.parseInt(tokens[4]));
-	            qstn = newGame[count].getQstn();
+	            qstn = newGame[count].getQuestion();
 	            out.println("Q: "+qstn);
 	            answer = JOptionPane.showInputDialog(null,qstn);
 	            out.println("A: "+answer+"\n");
@@ -73,7 +73,7 @@ public class TheGame {
 	            JOptionPane.showMessageDialog(null,str);
 	          break;
 	          case 'C':
-	            newGame[++count] = new MultiChoiceQuestion(tokens[1].trim(),tokens[2].trim(),tokens[3].trim(),tokens[4].trim(),Integer.parseInt(tokens[5]),Integer.parseInt(tokens[6]),Integer.parseInt(tokens[7]));
+	            newGame[++count] = new MultiChoiceQuestion(tokens[1].trim(),tokens[2].trim(),tokens[3].trim(),tokens[4].trim(),tokens[5].trim(),Integer.parseInt(tokens[6]),Integer.parseInt(tokens[7]) );
 	            qstn = newGame[count].getQstn();
 	            out.println("Q: "+qstn);
 	            answer = JOptionPane.showInputDialog(null,qstn);

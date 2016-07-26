@@ -2,6 +2,8 @@
 
 	import java.util.ArrayList;
 
+import henrybryan.friendquiz.business.AccessQuestions;
+
 	/**
 	 * @author Bryan Wodi <talk2kamp@gmail.com>
 	 *
@@ -11,8 +13,11 @@
 	  protected String answer;
 	  protected String reply;
 	  protected int correct;
-	  protected int fail;
-	  private ArrayList <Question> questions;
+	  private int fail;
+	  private int currentIndex;
+	  private AccessQuestions accessQuestions;
+	  private ArrayList<Question> questions;
+	  private ArrayList<UserResponse> responses;
 	  
 	  public Game(String q, int p, int f){
 	    question = q;
@@ -22,11 +27,15 @@
 	    fail = f;
 	  }
 	  
-	  public int calcScore(){
-	    if(checkResponse())
-	      return correct;
-	    else
-	      return (-1*fail);
+	  public Game() {
+		accessQuestions = new AccessQuestions();
+		questions = accessQuestions.getQuestions();
+		responses = new ArrayList<>();
+		currentIndex = 0;
+	}
+	  
+	  public int calcScore(Question currQuestion, String response){
+	    return accessQuestions.fetchMark(currQuestion, response);
 	  }
 	  public String getQstn(){
 	    return question;
