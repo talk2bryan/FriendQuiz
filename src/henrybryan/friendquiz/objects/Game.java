@@ -1,6 +1,8 @@
 	package henrybryan.friendquiz.objects;
-	
-	/**
+
+import java.util.ArrayList;
+
+/**
 	 * @author Bryan Wodi <talk2kamp@gmail.com>
 	 *
 	 */
@@ -10,6 +12,7 @@
 	  protected String reply;
 	  protected int correct;
 	  protected int fail;
+	  private ArrayList <Question> questions;
 	  
 	  public Game(String q, int p, int f){
 	    question = q;
