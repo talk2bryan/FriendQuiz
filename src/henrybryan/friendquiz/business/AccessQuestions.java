@@ -20,6 +20,7 @@ public class AccessQuestions {
 	private int currentQuestion;
 	
 	public AccessQuestions() {
+		questions = new ArrayList<>();
 		dataAccess = Services.getDataAccess("stub");
 		dataAccess.getQuestionSequential(questions);
 		question = null;

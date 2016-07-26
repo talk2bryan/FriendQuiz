@@ -13,8 +13,10 @@ public class ForAlyssa {
 	 */
 	public static void main(String[] args) {
 		Date myDate;
-	    TheGame game = new TheGame();
-	    game.play();
+//	    TheGame game = new TheGame();
+//	    game.play();
+		SimulateGame game = new SimulateGame();
+		game.playGame();
 	    myDate = new Date();
 	    System.out.println("Sefini");
 	    System.out.println(myDate);

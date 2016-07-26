@@ -23,6 +23,9 @@ public class Services {
     }
 	
 	public static DataAccess getDataAccess(String dbName){
+		//-----hack -- REMOVE --------//
+		createDataAccess(dbName);
+		//-----hack -- REMOVE --------//
         System.out.println(dbName + ": Initiating...");
         if (dataAccessService == null)
         {
