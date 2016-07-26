@@ -8,49 +8,44 @@ package henrybryan.friendquiz.objects;
  *
  */
 public class Question {
-	private String query;
+	protected String question;
 	private String key;
 	private int passMark;
 	private int failMark;
 	
 	public Question(String qq, String kk){
-		this.query = qq;
-		this.key = kk;
+		this.question = qq;
+		this.key = kk.toLowerCase();
 		this.passMark = 1;
 		this.failMark = 0;
 	}
 	
 	public Question (String qq, String kk,int correct){
-		this.query = qq;
-		this.key = kk;
+		this.question = qq;
+		this.key = kk.toLowerCase();
 		this.passMark = correct;
 		this.failMark = 0;
 	}
 	
 	public Question (String qq, String kk,int correct, int wrong){
-		this.query = qq;
-		this.key = kk;
+		this.question = qq;
+		this.key = kk.toLowerCase();
 		this.passMark = correct;
 		this.failMark = wrong;
 	}
 
-	public String getQuery() {
-		return query;
+	public String getQuestion() {
+		return question;
 	}
 
-	public void setQuery(String query) {
-		this.query = query;
+	public void setQuestion(String query) {
+		this.question = query;
 	}
 
 	public String getKey() {
 		return key;
 	}
 
-	public void setKey(String key) {
-		this.key = key;
-	}
-
-	
 	public int getPassMark() {
 		return passMark;
 	}
