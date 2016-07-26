@@ -1,6 +1,6 @@
 	package henrybryan.friendquiz.objects;
 
-import java.util.ArrayList;
+	import java.util.ArrayList;
 
 /**
 	 * @author Bryan Wodi <talk2kamp@gmail.com>
