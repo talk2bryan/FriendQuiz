@@ -62,7 +62,6 @@ public class AccessQuestions {
 		else {
 			refreshQuestions();
 			question = null;
-			currentQuestion = 0;
 		}
 		return question;
 	}

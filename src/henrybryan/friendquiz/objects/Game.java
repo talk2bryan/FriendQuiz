@@ -37,6 +37,15 @@ import henrybryan.friendquiz.business.AccessQuestions;
 	  public int calcScore(Question currQuestion, String response){
 	    return accessQuestions.fetchMark(currQuestion, response);
 	  }
+	  
+	  
+	  
+	  /*
+	   * everything below is going to be deleted soon
+	   */
+	  
+	  
+	  
 	  public String getQstn(){
 	    return question;
 	  }
