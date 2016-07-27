@@ -5,7 +5,6 @@ package henrybryan.friendquiz.presentation;
 
 import java.util.Date;
 
-import henrybryan.friendquiz.objects.TheGame;
 public class ForAlyssa {
 
 	/**
