@@ -36,6 +36,7 @@ public class SimulateGame {
 		currentIndex = 0;
 		kbd = new Scanner(System.in);
 	}
+	
 	public void playGame(){
 		String userResponse;
 		for (Question question : questions){
@@ -46,6 +47,7 @@ public class SimulateGame {
 			currentIndex++;
 		}
 	}
+	
 	private void validateResponse(String userResponse) {
 		Question question = questions.get(currentIndex);
 		if (question.getKey().equalsIgnoreCase(userResponse)) {
