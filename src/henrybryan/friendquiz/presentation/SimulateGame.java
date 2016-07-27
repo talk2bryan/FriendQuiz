@@ -9,7 +9,6 @@ import java.util.Scanner;
 import javax.swing.JOptionPane;
 
 import henrybryan.friendquiz.business.AccessQuestions;
-import henrybryan.friendquiz.objects.Game;
 import henrybryan.friendquiz.objects.Question;
 import henrybryan.friendquiz.objects.UserResponse;
 
