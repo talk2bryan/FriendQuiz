@@ -20,7 +20,6 @@ public class ForAlyssa {
 	    myDate = new Date();
 	    System.out.println("Sefini");
 	    System.out.println(myDate);
-
 	}
 
 }

@@ -4,6 +4,7 @@
 package henrybryan.friendquiz.presentation;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
 import javax.swing.JOptionPane;
 
@@ -26,16 +27,31 @@ public class SimulateGame {
 	  private double percent;
 	  private String player;
 	  private int count;
+	  private Scanner kbd;
 	 
 	public SimulateGame(){
 		accessQuestions = new AccessQuestions();
 		questions = accessQuestions.getQuestions();
 		responses = new ArrayList<>();
 		currentIndex = 0;
+		kbd = new Scanner(System.in);
 	}
 	public void playGame(){
-		for (Question question : questions) {
-			JOptionPane.showMessageDialog(null, question.getQuestion());
+		String userResponse;
+		for (Question question : questions){
+			System.out.println(question.getQuestion());
+			userResponse = kbd.nextLine();
+			//assert that we don't get null here
+			validateResponse(userResponse);
+			currentIndex++;
+		}
+	}
+	private void validateResponse(String userResponse) {
+		Question question = questions.get(currentIndex);
+		if (question.getKey().equalsIgnoreCase(userResponse)) {
+			System.out.println("You are correct");
+		} else {
+			System.out.println("uhh! you're wrong");
 		}
 	}
 
