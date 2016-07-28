@@ -1,15 +1,10 @@
 /**
  * 
  */
-package presentation;
+package henrybryan.friendquiz.presentation;
 
 import java.util.Date;
 
-/**
- * @author Bryan Wodi <talk2kamp@gmail.com>
- *
- */
-import objects.TheGame;
 public class ForAlyssa {
 
 	/**
@@ -17,12 +12,13 @@ public class ForAlyssa {
 	 */
 	public static void main(String[] args) {
 		Date myDate;
-	    TheGame game = new TheGame();
-	    game.play();
+//	    TheGame game = new TheGame();
+//	    game.play();
+		SimulateGame game = new SimulateGame();
+		game.playGame();
 	    myDate = new Date();
 	    System.out.println("Sefini");
 	    System.out.println(myDate);
-
 	}
 
 }
