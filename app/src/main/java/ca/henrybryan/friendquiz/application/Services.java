@@ -3,8 +3,9 @@
  */
 package ca.henrybryan.friendquiz.application;
 
-import henrybryan.friendquiz.persistence.DataAccess;
-import henrybryan.friendquiz.persistence.DataAccessStub;
+
+import ca.henrybryan.friendquiz.persistence.DataAccess;
+import ca.henrybryan.friendquiz.persistence.DataAccessStub;
 
 /**
  * @author Bryan Wodi <talk2kamp@gmail.com>

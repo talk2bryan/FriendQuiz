@@ -5,9 +5,9 @@ package ca.henrybryan.friendquiz.business;
 
 import java.util.ArrayList;
 
-import henrybryan.friendquiz.application.Services;
-import henrybryan.friendquiz.objects.Question;
-import henrybryan.friendquiz.persistence.DataAccess;
+import ca.henrybryan.friendquiz.application.Services;
+import ca.henrybryan.friendquiz.objects.Question;
+import ca.henrybryan.friendquiz.persistence.DataAccess;
 
 /**
  * @author Bryan Wodi <talk2kamp@gmail.com>
