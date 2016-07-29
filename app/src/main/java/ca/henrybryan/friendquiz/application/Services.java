@@ -1,7 +1,7 @@
 /**
  * 
  */
-package henrybryan.friendquiz.application;
+package ca.henrybryan.friendquiz.application;
 
 import henrybryan.friendquiz.persistence.DataAccess;
 import henrybryan.friendquiz.persistence.DataAccessStub;

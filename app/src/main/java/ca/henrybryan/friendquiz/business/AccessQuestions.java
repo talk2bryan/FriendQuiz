@@ -1,7 +1,7 @@
 /**
  * 
  */
-package henrybryan.friendquiz.business;
+package ca.henrybryan.friendquiz.business;
 
 import java.util.ArrayList;
 

@@ -1,7 +1,7 @@
 /**
  * 
  */
-package henrybryan.friendquiz.objects;
+package ca.henrybryan.friendquiz.objects;
 
 import java.util.ArrayList;
 

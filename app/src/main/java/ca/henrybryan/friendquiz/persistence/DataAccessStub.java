@@ -1,12 +1,12 @@
 /**
  * 
  */
-package henrybryan.friendquiz.persistence;
+package ca.henrybryan.friendquiz.persistence;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import henrybryan.friendquiz.objects.Question;
+import ca.henrybryan.friendquiz.objects.Question;
 
 public class DataAccessStub implements DataAccess {
 	private ArrayList<Question> questions;

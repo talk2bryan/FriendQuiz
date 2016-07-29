@@ -1,7 +1,7 @@
 /**
  * 
  */
-package henrybryan.friendquiz.presentation;
+package ca.henrybryan.friendquiz.presentation;
 
 import java.util.Date;
 

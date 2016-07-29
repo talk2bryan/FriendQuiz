@@ -1,4 +1,4 @@
-package henrybryan.friendquiz.tests;
+package ca.henrybryan.friendquiz.tests;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.io.BufferedReader;

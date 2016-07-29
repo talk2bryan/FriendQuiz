@@ -1,7 +1,7 @@
 /**
  * 
  */
-package henrybryan.friendquiz.business;
+package ca.henrybryan.friendquiz.business;
 
 /**
  * @author Bryan Wodi <talk2kamp@gmail.com>

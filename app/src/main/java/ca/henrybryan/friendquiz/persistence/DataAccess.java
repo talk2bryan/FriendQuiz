@@ -1,8 +1,8 @@
-package henrybryan.friendquiz.persistence;
+package ca.henrybryan.friendquiz.persistence;
 
 import java.util.List;
 
-import henrybryan.friendquiz.objects.Question;
+import ca.henrybryan.friendquiz.objects.Question;
 
 public interface DataAccess {
 

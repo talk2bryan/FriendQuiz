@@ -1,7 +1,7 @@
 /**
  * 
  */
-package henrybryan.friendquiz.application;
+package ca.henrybryan.friendquiz.application;
 
 /**
  * @author Bryan Wodi <talk2kamp@gmail.com>

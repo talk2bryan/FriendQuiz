@@ -1,7 +1,7 @@
 /**
  * 
  */
-package henrybryan.friendquiz.presentation;
+package ca.henrybryan.friendquiz.presentation;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -9,10 +9,10 @@ import java.util.Scanner;
 
 import javax.swing.JOptionPane;
 
-import henrybryan.friendquiz.business.AccessQuestions;
-import henrybryan.friendquiz.business.Calculate;
-import henrybryan.friendquiz.objects.Question;
-import henrybryan.friendquiz.objects.UserResponse;
+import ca.henrybryan.friendquiz.business.AccessQuestions;
+import ca.henrybryan.friendquiz.business.Calculate;
+import ca.henrybryan.friendquiz.objects.Question;
+import ca.henrybryan.friendquiz.objects.UserResponse;
 
 /**
  * @author Bryan Wodi <talk2kamp@gmail.com>
