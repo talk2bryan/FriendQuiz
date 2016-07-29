@@ -6,11 +6,12 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.FileReader;
 
-import javax.swing.JOptionPane;
+//import javax.swing.JOptionPane;
 
-import henrybryan.friendquiz.objects.Game;
-import henrybryan.friendquiz.objects.MultiChoiceQuestion;
-import henrybryan.friendquiz.objects.WrittenQuestion;
+//import henrybryan.friendquiz.objects.Game;
+//import henrybryan.friendquiz.objects.MultiChoiceQuestion;
+//import henrybryan.friendquiz.objects.WrittenQuestion;
+
 
 
 
@@ -20,10 +21,10 @@ public class PerformTests {
 	public static void main(String [] args)throws IOException{
 	    boolean test1=true;
 	    boolean test2;
-	    test2 = checkClass();//writeFile();
+	    //test2 = checkClass();//writeFile();
 	    count = -1;
 	    System.out.println("readFile() " + (test1? "passed":"failed")+ " the test");
-	    System.out.println("checkClass() " + (test2? "passed":"failed")+ " the test");
+	    //System.out.println("checkClass() " + (test2? "passed":"failed")+ " the test");
 	    System.out.println("End of this test");
 	  }
 	  
@@ -48,7 +49,7 @@ public class PerformTests {
 	    return result;
 	  }
 	  
-	  public static boolean checkClass(){
+	  /*public static boolean checkClass(){
 	    boolean result= false;
 	    Game []newGame;
 	    double totalScore = 0.0;
@@ -120,6 +121,6 @@ public class PerformTests {
 	      percent = 0.0;
 	    System.out.println(percent);
 	    return result;
-	  }
+	  } */
 
 }
