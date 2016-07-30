@@ -13,6 +13,4 @@ public class MultiChoiceQuestionTest extends TestCase{
 
         MultiChoiceQuestion question = new MultiChoiceQuestion("What is a String?","an int","an object","a double","an object",1,1);
     }
-
-
 }
