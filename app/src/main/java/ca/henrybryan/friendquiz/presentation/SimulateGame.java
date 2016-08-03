@@ -4,10 +4,8 @@
 package ca.henrybryan.friendquiz.presentation;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.Scanner;
 
-import javax.swing.JOptionPane;
 
 import ca.henrybryan.friendquiz.business.AccessQuestions;
 import ca.henrybryan.friendquiz.business.Calculate;
@@ -16,7 +14,7 @@ import ca.henrybryan.friendquiz.objects.UserResponse;
 
 /**
  * @author Bryan Wodi <talk2kamp@gmail.com>
- *@date    Jul 26, 20161:37:34 PM
+ *@date    Jul 26, 2016 1:37:34 PM
  */
 public class SimulateGame {
 	private int currentIndex;
