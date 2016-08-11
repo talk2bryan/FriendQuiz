@@ -1,6 +1,3 @@
-/**
- * 
- */
 package ca.henrybryan.friendquiz.objects;
 
 /**
