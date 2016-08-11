@@ -1,5 +1,5 @@
 # FriendQuiz
-This initially started as a text based query I made in 2015 for my friends and I to test our knowlwdge on each other, by asking important questions like birth dates and what not. I decided now to improve on it and make it an application friens can use as an ice breaker.
+This initially started as a text based query I made in 2015 for my friends and I to test our knowlwdge on each other, by asking important questions like birth dates and what not. I decided now to improve on it and make it an application friends can use as an ice breaker.
 
 Clone/Download instructions
 ----------------------------
