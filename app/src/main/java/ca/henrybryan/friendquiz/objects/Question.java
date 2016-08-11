@@ -7,7 +7,7 @@ package ca.henrybryan.friendquiz.objects;
  * @author Bryan Wodi <talk2kamp@gmail.com>
  *
  */
-public class Question {
+public class  Question {
 	protected String question;
 	private String key;
 	private int passMark;

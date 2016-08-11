@@ -1,29 +1,41 @@
 /**
- * 
+ *
  */
 package ca.henrybryan.friendquiz.objects;
 
 /**
  * @author Bryan Wodi <talk2kamp@gmail.com>
- *
  */
 public class MultiChoiceQuestion extends Question {
-	  private String a,b,c;
-	  
-	  public MultiChoiceQuestion(String q, String aa, String bb, String cc, String ans,int p, int f){
-		  
-	    super(q,ans,p,f);
-	    a=aa.toLowerCase();
-	    b=bb.toLowerCase();
-	    c=cc.toLowerCase();
-	  }
-	  
-	  @Override
-	  public String getQuestion (){
-	    String result = " "+ question + "\n(a) " + a +" (b) "+ b +" (c)" +c;
-	    return result;
-	  }
-	  
+    private String a, b, c;
+
+    public MultiChoiceQuestion(String q, String aa, String bb, String cc, String ans, int p, int f) {
+        super(q, ans, p, f);
+        a = aa.toLowerCase();
+        b = bb.toLowerCase();
+        c = cc.toLowerCase();
+    }
+
+    public MultiChoiceQuestion(String q, String aa, String bb, String cc, String ans, int p) {
+        super(q, ans, p);
+        a = aa.toLowerCase();
+        b = bb.toLowerCase();
+        c = cc.toLowerCase();
+    }
+
+    public MultiChoiceQuestion(String q, String aa, String bb, String cc, String ans) {
+        super(q, ans);
+        a = aa.toLowerCase();
+        b = bb.toLowerCase();
+        c = cc.toLowerCase();
+    }
+
+    @Override
+    public String getQuestion() {
+        String result = " " + question + "\n(a) " + a + " (b) " + b + " (c)" + c;
+        return result;
+    }
+
 //	  public void setReply(String str){
 //	    char ch = str.charAt(0);
 //	    if(ch == 'a')
