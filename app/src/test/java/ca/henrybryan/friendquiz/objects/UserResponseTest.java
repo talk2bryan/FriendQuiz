@@ -1,4 +1,4 @@
-package ca.henrybryan.friendquiz.tests.objects;
+package ca.henrybryan.friendquiz.objects;
 
 /**
  * Created by Bryan Wodi <talk2kamp@gmail.com> on 16-08-10.
