@@ -1,5 +1,6 @@
 package ca.henrybryan.friendquiz.objects;
 
+
 /**
  * @author Bryan Wodi <talk2kamp@gmail.com>
  *

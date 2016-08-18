@@ -1,6 +1,8 @@
-package ca.henrybryan.friendquiz.objects;
+package ca.henrybryan.friendquiz.tests.objects;
 
 import junit.framework.TestCase;
+
+import ca.henrybryan.friendquiz.objects.MultiChoiceQuestion;
 
 /**
  * Created by Bryan Wodi <talk2kamp@gmail.com> on 16-07-29.
